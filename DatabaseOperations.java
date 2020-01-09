@@ -141,8 +141,8 @@ DatabaseCrudOperations.createTable(ctname, colcount, pkey, st, query);
                  int pkey = Integer.parseInt(prt);
                st =  con.createStatement();
                query = "select * from "+rtname+" where id='"+pkey+"'";
-            /*   ResultSet rs=st.executeQuery(query);  
-               ResultSetMetaData rsmd=rs.getMetaData();  
+                ResultSet rs=st.executeQuery(query);  
+                ResultSetMetaData rsmd=rs.getMetaData();  
   int colc = rsmd.getColumnCount();
 System.out.println("Total columns: "+rsmd.getColumnCount());  
 System.out.println("Column Name of 1st column: "+rsmd.getColumnName(1));  
@@ -169,7 +169,7 @@ System.out.println(rsmd.getColumnName(i)+"   "+rs.getString(i));
 
 }
 //System.out.println(qq);
-}*/
+}
 //System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3)); 
 
 DatabaseCrudOperations.retrieveTable(rtname, pkey, query, st);
